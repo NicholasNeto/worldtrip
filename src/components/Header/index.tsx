@@ -5,10 +5,9 @@ import { Image } from "@chakra-ui/react"
 export function Header() {
     return (
         <Flex
+            as='header'
             display='flex'
             justifyContent='center'
-            as='header'
-            maxWidth={1440}
         >
             <Image
                 boxSize="100px"
