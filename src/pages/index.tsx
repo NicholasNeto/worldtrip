@@ -1,6 +1,7 @@
 import { Header } from '../components/Header'
 import { Banner } from '../components/Banner'
 import { TravelType } from '../components/Travel'
+import { Content } from '../components/Content'
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Header />
       <Banner />
       <TravelType />
+      <Content />
     </>
   )
 }
