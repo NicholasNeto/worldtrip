@@ -5,12 +5,9 @@ export function TravelType() {
     return (
         <HStack
             spacing={40}
+            align="center"
             justifyContent='center'
-            position='absolute'
-            width='1160px'
-            height='145px'
-            left='140px'
-            top='549px'
+            marginTop="10"
         >
             <Box>
                 <Image
