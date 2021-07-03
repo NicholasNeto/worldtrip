@@ -14,10 +14,10 @@ export function Content() {
                 spacing={4}
                 align="center"
 
-                font-family='Poppins'
-                font-style='normal'
-                font-weight='500'
-                font-size='36px'
+                fontFamily='Poppins'
+                fontStyle='normal'
+                fontWeight='500'
+                fontSize='36px'
                 line-height='54px'
             >
                 <Text>Vamos nessa?</Text>

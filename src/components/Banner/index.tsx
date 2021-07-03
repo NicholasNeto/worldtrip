@@ -34,10 +34,10 @@ export function Banner() {
                     left='140px'
                     top='308px'
 
-                    font-family='Poppins'
-                    font-style='normal'
-                    font-weight='normal'
-                    font-size='20px'
+                    fontFamily='Poppins'
+                    fontStyle='normal'
+                    fontWeight='normal'
+                    fontSize='20px'
                     line-height='30px'
                     color='#DADADA'
                 >
