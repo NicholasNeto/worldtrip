@@ -1,36 +1,43 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Image, Flex } from "@chakra-ui/react"
-// import SwiperCore from 'swiper/core';
-import 'swiper/swiper-bundle.css'
-import React from 'react';
-// import './styles.css'
 
-// Import Swiper styles
-// import 'swiper/swiper.scss';
+import React, { useRef, useState } from "react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { EffectFade, Navigation, Pagination } from 'swiper/core';
+
+import "swiper/swiper.min.css";
+import "swiper/components/effect-fade/effect-fade.min.css"
+import "swiper/components/navigation/navigation.min.css"
+import "swiper/components/pagination/pagination.min.css"
 
 export function NNSwiper() {
-    return (
-        <Swiper
-            spaceBetween={50}
-            slidesPerView={3}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
-        >
-            <SwiperSlide>
-                <Flex>
-                    <Image
-                        display='flex'
-                        justifyContent='center'
-                        maxWidth='1240px'
-                        maxHeight='450px'
-                        src="/images/europa.svg"
-                        background='linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url(.jpg)'
-                        box-shadow='0px 4px 4px rgba(0, 0, 0, 0.25)'
-                    />
-                </Flex>
+    SwiperCore.use([EffectFade, Navigation, Pagination]);
 
-            </SwiperSlide>
-        </Swiper>
-    );
-};
+    return (
+        <>
+            <Swiper
+                cssMode={true} navigation={true} pagination={true} mousewheel={true} keyboard={true} className="mySwiper" 
+                breakpoints={{
+                    // when window width is >= 320px
+                    320: {
+                      slidesPerView: 2,
+                      spaceBetween: 20
+                    },
+                    // when window width is >= 480px
+                    480: {
+                      slidesPerView: 3,
+                      spaceBetween: 30
+                    },
+                    // when window width is >= 640px
+                    640: {
+                      slidesPerView: 3,
+                      spaceBetween: 1
+                    }
+                  }}>
+                <SwiperSlide><img src="https://swiperjs.com/demos/images/nature-1.jpg" /></SwiperSlide>
+                <SwiperSlide><img src="https://swiperjs.com/demos/images/nature-2.jpg" /></SwiperSlide>
+                <SwiperSlide><img src="https://swiperjs.com/demos/images/nature-3.jpg" /></SwiperSlide>
+                <SwiperSlide><img src="https://swiperjs.com/demos/images/nature-4.jpg" /></SwiperSlide>
+            </Swiper>
+        </>
+    )
+}
