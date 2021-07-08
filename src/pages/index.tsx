@@ -8,7 +8,6 @@ import { NNSwiper } from '../components/Swiper'
 export default function Home() {
   return (
     <>
-      <Header />
       <Banner />
       <TravelType />
       <Content />
