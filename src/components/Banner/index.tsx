@@ -1,6 +1,5 @@
 import { Image, Flex, Text } from "@chakra-ui/react"
 
-
 export function Banner() {
     return (
         <Flex>

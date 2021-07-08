@@ -5,8 +5,10 @@ export function Content() {
         <>
             <Divider
                 colorScheme='blackAlpha'
-                size='8'
+                
+                size='3xs'
                 variant='solid'
+                my={10}
             // border='2px solid #47585B'
             //orientation="horizontal" 
             />
