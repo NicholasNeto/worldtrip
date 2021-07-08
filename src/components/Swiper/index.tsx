@@ -4,7 +4,7 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { EffectFade, Navigation, Pagination } from 'swiper/core';
 
-import { Flex } from '@chakra-ui/react'
+import { Flex, Image } from '@chakra-ui/react'
 
 import "swiper/swiper.min.css";
 import "swiper/components/effect-fade/effect-fade.min.css"
@@ -15,30 +15,25 @@ export function NNSwiper() {
     SwiperCore.use([EffectFade, Navigation, Pagination]);
 
     return (
-        <Flex w="100%" h={["250px","450px"]} maxW="1240px" mx="auto" mb={["5","10"]}>
+        <Flex w="100%" h={["250px", "450px"]}  mx="auto" mb={["5", "10"]} maxW={'1240px'} >
             <Swiper
-                cssMode={true} navigation={true} pagination={true} mousewheel={true} keyboard={true} className="mySwiper" 
-                breakpoints={{
-                    // when window width is >= 320px
-                    320: {
-                      slidesPerView: 1,
-                      spaceBetween: 20
-                    },
-                    // when window width is >= 480px
-                    480: {
-                      slidesPerView: 3,
-                      spaceBetween: 30
-                    },
-                    // when window width is >= 640px
-                    640: {
-                      slidesPerView: 1,
-                      spaceBetween: 30
-                    }
-                  }}>
-                <SwiperSlide><img src="https://swiperjs.com/demos/images/nature-1.jpg" /></SwiperSlide>
-                <SwiperSlide><img src="https://swiperjs.com/demos/images/nature-2.jpg" /></SwiperSlide>
-                <SwiperSlide><img src="https://swiperjs.com/demos/images/nature-3.jpg" /></SwiperSlide>
-                <SwiperSlide><img src="https://swiperjs.com/demos/images/nature-4.jpg" /></SwiperSlide>
+                spaceBetween={0}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                initialSlide={0}
+            >
+                <SwiperSlide><Image htmlWidth='1240px' 
+                bg='linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url(.jpg)'
+                boxShadow='0px 4px 4px rgba(0, 0, 0, 0.25)'
+                src="/images/europa.svg" /></SwiperSlide>
+                <SwiperSlide><Image htmlWidth='1240px' src="https://swiperjs.com/demos/images/nature-2.jpg" /></SwiperSlide>
+                <SwiperSlide><Image htmlWidth='1240px' src="https://swiperjs.com/demos/images/nature-3.jpg" /></SwiperSlide>
+                <SwiperSlide><Image htmlWidth='1240px' src="https://swiperjs.com/demos/images/nature-4.jpg" /></SwiperSlide>
+                <SwiperSlide><Image htmlWidth='1240px' src="https://swiperjs.com/demos/images/nature-1.jpg" /></SwiperSlide>
+                <SwiperSlide><Image htmlWidth='1240px' src="https://swiperjs.com/demos/images/nature-2.jpg" /></SwiperSlide>
+                <SwiperSlide><Image htmlWidth='1240px' src="https://swiperjs.com/demos/images/nature-3.jpg" /></SwiperSlide>
+                <SwiperSlide><Image htmlWidth='1240px' src="https://swiperjs.com/demos/images/nature-4.jpg" /></SwiperSlide>
             </Swiper>
         </Flex>
     )
