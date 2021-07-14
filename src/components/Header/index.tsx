@@ -1,4 +1,4 @@
-import { Flex, Image } from "@chakra-ui/react";
+import { Flex, Image, Grid } from "@chakra-ui/react";
 
 export function Header() {
     return (
@@ -11,7 +11,23 @@ export function Header() {
             align="center"
             justify='center'
         >
-            <Image src="/images/logo.svg" alt="logo word trip" />
+            <Grid
+                h='100%'
+                mx='auto'
+                width='100%'
+                maxWidth='1160px'
+                alignItems="center"
+                templateColumns="repeat(3, 1fr)"
+                justifyContent="center"
+            >
+                <Image
+                    src="/images/logo.svg"
+                    alt="logo word trip"
+                    w={['81px', '184px']}
+                    gridColumn='2'
+                    justifySelf='center'
+                />
+            </Grid>
         </Flex>
     )
 }
