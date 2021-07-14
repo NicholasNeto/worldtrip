@@ -11,10 +11,11 @@ export function Banner() {
 
     return (
         <Box
-            bgSize={1}
+            bgSize='cover'
+            bgRepeat='no-repeat'
             backgroundImage="url('/images/background.jpg')"
-            height={[375, 335]}
-            maxWidth={1440}
+            height={['163px', '250px', '250px', '335px' ]}
+            width='100%'
         >
             <VStack spacing={4} align="flex-start" ml='9rem'>
                 <Box
