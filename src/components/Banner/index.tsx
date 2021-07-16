@@ -11,12 +11,12 @@ export function Banner() {
             height={['163px', '250px', '250px', '335px']}
             width='100%'
         >
-            <Stack direction="column" spacing={10} align="flex-start" ml={['1rem', '9rem']} width="100%">
+            <Stack direction="column" spacing={[1, 8, 7, 7 ]} align="flex-start" ml={['1rem', '9rem']} width="100%">
                 <Box
                     h={['58px', '82px', '82px', '108px']}
                     w={['238px', '285px', '332px', '426px']}
                     lineHeight={['30px', '36px', '42px', '54px']}
-                    mt={['1.75rem', '5rem']}
+                    mt={['1.75rem', '3rem']}
                 >
                     <Text
                         fontFamily='Poppins'
@@ -29,7 +29,7 @@ export function Banner() {
                     </Text>
                 </Box>
                 <Box
-                    h={['41px', '45px', '49px', '57px']}
+                    h={['41px', '57px', '57px', '57px']}
                     //w={['333px', '380px', '427px', '524px']}
                     maxW={["100%", "100%", "100%", "550px"]}
                     lineHeight={['21px', '23px', '23px', '30px']}
