@@ -2,6 +2,12 @@ import { Image, Flex, Text, Box, useBreakpointValue, VStack, Stack } from "@chak
 import React from "react"
 
 export function Banner() {
+
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        md: true,
+    })
+
     return (
         <Flex
             backgroundImage="url('/images/banner.jpg')"
@@ -10,8 +16,10 @@ export function Banner() {
             backgroundPosition={['100% 20%', '100% 20%', '100% 30%']}
             height={['163px', '250px', '250px', '335px']}
             width='100%'
+
+            justifyContent='space-between'
         >
-            <Stack direction="column" spacing={[1, 8, 7, 7 ]} align="flex-start" ml={['1rem', '9rem']} width="100%">
+            <Stack direction="column" spacing={[1, 8, 7, 7]} ml={['1rem', '2rem', '3rem', '9rem']} >
                 <Box
                     h={['58px', '82px', '82px', '108px']}
                     w={['238px', '285px', '332px', '426px']}
@@ -45,23 +53,11 @@ export function Banner() {
                     </Text>
                 </Box>
             </Stack>
+            {isWideVersion &&
+                <Image
+                    src="/images/airplane.svg"
+                    transform="translateY(48px)"
+                />}
         </Flex >
     )
 }
-
-
-
-
-// </VStack>
-
-// {isWideVersion &&
-// <Image
-//     position='absolute'
-//     width='417.15px'
-//     height='270.74px'
-//     left='883.42px'
-//     top='210px'
-//     src="/images/airplane.svg"
-//     transform='rotate(3deg)'
-// />
-// }
