@@ -9,8 +9,8 @@ import { Flex } from '@chakra-ui/react'
 export default function Home() {
   return (
     <Flex direction='column'>
-      {/* <Banner />
-      <TravelType />
+      <Banner />
+      {/* <TravelType />
       <Content />
       <NNSwiper /> */}
     </Flex>
