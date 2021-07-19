@@ -6,17 +6,24 @@ export function TravelType() {
 
     const isWideVersion = useBreakpointValue({
         base: false,
-        md: true,
+        sm: true,
     })
 
 
     return (
-        <Flex width="100%" height={['120px', '145px']} px='2rem' marginTop='5rem'>
-            <Grid templateColumns={['repeat(2, 1fr)', 'repeat(5, 1fr)']} gap={6} width="100%" >
-                <GridItem colSpan={[2, 1]}>
-                    <Stack direction={["row", "row", "column", "column"]} align="center" >
+        <Flex width="100%" height={['120px', '145px']} marginTop={['2rem', '5rem']} justifyContent='center'>
+            <Grid
+                templateRows="repeat(3, 1fr)"
+                templateColumns={['repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(5, 1fr)']}
+                gap={8}
+                width="100%" >
+                <GridItem>
+                    <Stack direction={["row", "column", "column", "column"]} align="center" >
                         {isWideVersion ?
-                            <Image src="/images/nightlife.svg" /> :
+                            <Image
+                                src="/images/nightlife.svg"
+                                boxSize={['50px', '50px', '50px', '85px']}
+                            /> :
                             <Image
                                 src="Ellipse.svg"
                                 borderRadius="full"
@@ -30,10 +37,11 @@ export function TravelType() {
                         </Text>
                     </Stack>
                 </GridItem>
-                <GridItem colSpan={[2, 1]}>
-                    <Stack direction={["row", "row", "column", "column"]} align="center" >
+                <GridItem>
+                    <Stack direction={["row", "column", "column", "column"]} align="center" >
                         {isWideVersion ?
-                            <Image src="/images/beach.svg" /> :
+                            <Image src="/images/beach.svg"
+                                boxSize={['50px', '50px', '50px', '85px']} /> :
                             <Image
                                 src="Ellipse.svg"
                                 borderRadius="full"
@@ -47,10 +55,11 @@ export function TravelType() {
                         </Text>
                     </Stack>
                 </GridItem>
-                <GridItem colSpan={[2, 1]}>
-                    <Stack direction={["row", "row", "column", "column"]} align="center" >
+                <GridItem>
+                    <Stack direction={["row", "column", "column", "column"]} align="center" >
                         {isWideVersion ?
-                            <Image src="/images/building.svg" /> :
+                            <Image src="/images/building.svg"
+                                boxSize={['50px', '50px', '50px', '85px']} /> :
                             <Image
                                 src="Ellipse.svg"
                                 borderRadius="full"
@@ -64,10 +73,11 @@ export function TravelType() {
                         </Text>
                     </Stack>
                 </GridItem>
-                <GridItem colSpan={[2, 1]}>
-                    <Stack direction={["row", "row", "column", "column"]} align="center" >
+                <GridItem>
+                    <Stack direction={["row", "column", "column", "column"]} align="center" >
                         {isWideVersion ?
-                            <Image src="/images/museum.svg" /> :
+                            <Image src="/images/museum.svg"
+                                boxSize={['50px', '50px', '50px', '85px']} /> :
                             <Image
                                 src="Ellipse.svg"
                                 borderRadius="full"
@@ -81,10 +91,11 @@ export function TravelType() {
                         </Text>
                     </Stack>
                 </GridItem>
-                <GridItem colSpan={[2, 1]}>
-                    <Stack direction={["row", "row", "column", "column"]} align="center" >
+                <GridItem>
+                    <Stack direction={["row", "column", "column", "column"]} align="center" >
                         {isWideVersion ?
-                            <Image src="/images/earth.svg" /> :
+                            <Image src="/images/earth.svg"
+                                boxSize={['50px', '50px', '50px', '85px']} /> :
                             <Image
                                 src="Ellipse.svg"
                                 borderRadius="full"
