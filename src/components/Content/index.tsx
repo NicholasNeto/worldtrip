@@ -5,7 +5,6 @@ export function Content() {
         <>
             <Divider
                 colorScheme='blackAlpha'
-                
                 size='3xs'
                 variant='solid'
                 my={10}
@@ -15,15 +14,23 @@ export function Content() {
             <VStack
                 spacing={4}
                 align="center"
-
-                fontFamily='Poppins'
-                fontStyle='normal'
-                fontWeight='500'
-                fontSize='36px'
-                line-height='54px'
+                line-height={['30px', '54px']}
             >
-                <Text>Vamos nessa?</Text>
-                <Text>Então escolha seu continente</Text>
+                <Text
+                    fontFamily='Poppins'
+                    fontStyle='normal'
+                    fontWeight='500'
+                    fontSize={['20px', '20px', '20px', '36px']}
+                >
+                    Vamos nessa?</Text>
+                <Text
+                    fontFamily='Poppins'
+                    fontStyle='normal'
+                    fontWeight='500'
+                    fontSize={['20px', '20px', '20px', '36px']}
+                >
+                    Então escolha seu continente
+                </Text>
             </VStack>
         </>
     )
