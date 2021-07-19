@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <Flex direction='column'>
       <Banner />
-      {/* <TravelType />
-      <Content />
+      <TravelType />
+      {/*<Content />
       <NNSwiper /> */}
     </Flex>
   )
