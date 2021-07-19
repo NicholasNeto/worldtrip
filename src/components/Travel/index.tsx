@@ -1,48 +1,64 @@
 
-import { HStack, Flex, Box, Image, Text } from "@chakra-ui/react";
+import { Stack, Flex, Box, Image, Text, Grid } from "@chakra-ui/react";
 
 export function TravelType() {
     return (
-        <HStack
-            spacing={40}
-            align="center"
-            justifyContent='center'
-            marginTop="10"
-        >
-            <Box>
-                <Image
-                    src="/images/nightlife.svg"
-                />
-                <Text>vida noturna</Text>
-            </Box>
+        <Flex width="100%" height={['120px', '145px']}>
+            <Grid templateColumns={['repeat(2, 1fr)', 'repeat(4, 1fr)']} gap={6} >
+                <Box w="100%" h="120px" backgroundColor='#FFBA08'>
+                    <Text>asas</Text>
+                </Box>
+                <Box w="100%" h="120px" backgroundColor='#FFBA08'></Box>
+                <Box w="100%" h="120px" backgroundColor='#FFBA08' ></Box>
+                <Box w="100%" h="120px" backgroundColor='#FFBA08' ></Box>
 
-            <Box>
-                <Image
-                    src="/images/beach.svg"
-                />
-                <Text>praia</Text>
-            </Box>
-            <Box>
-                <Image
-                    src="/images/building.svg"
-                />
-                <Text>moderno</Text>
-            </Box>
-            <Box>
-                <Image
-                    src="/images/museum.svg"
-                />
-                <Text>clássico</Text>
-            </Box>
-
-            <Box>
-                <Image
-                    src="/images/earth.svg"
-                />
-                <Text>e mais...</Text>
-            </Box>
-
-
-        </HStack>
+            </Grid> 
+            <Grid templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)']} gap={6} >
+                <Box w="100%" h="120px" backgroundColor='#FFBA08'>
+                    <Text>asas</Text>
+                </Box>
+            </Grid>
+            
+        </Flex>
     )
 }
+
+
+{/* <Box>
+<Image
+    src="/images/nightlife.svg"
+/>
+<Image
+    src="Ellipse.svg"
+    borderRadius="full"
+    boxSize="15px"
+    backgroundColor="#FFBA08"
+/>
+<Text>vida noturna</Text>
+</Box>
+
+<Box>
+<Image
+    src="/images/beach.svg"
+/>
+<Text>praia</Text>
+</Box>
+<Box>
+<Image
+    src="/images/building.svg"
+/>
+<Text>moderno</Text>
+</Box>
+<Box>
+<Image
+    src="/images/museum.svg"
+/>
+<Text>clássico</Text>
+</Box>
+
+<Box>
+<Image
+    src="/images/earth.svg"
+/>
+<Text>e mais...</Text>
+</Box> */}
