@@ -31,7 +31,7 @@ export function TravelType() {
                                 backgroundColor="#FFBA08"
                             />}
                         <Text
-                            fontSize={['18px', '20px', '20px', '24px']}
+                            fontSize={['18px', '18px', '18px', '24px']}
                         >
                             vida noturna
                         </Text>
@@ -49,7 +49,7 @@ export function TravelType() {
                                 backgroundColor="#FFBA08"
                             />}
                         <Text
-                            fontSize={['18px', '20px', '20px', '24px']}
+                            fontSize={['18px', '18px', '18px', '24px']}
                         >
                             praia
                         </Text>
@@ -67,7 +67,7 @@ export function TravelType() {
                                 backgroundColor="#FFBA08"
                             />}
                         <Text
-                            fontSize={['18px', '20px', '20px', '24px']}
+                            fontSize={['18px', '18px', '18px', '24px']}
                         >
                             moderno
                         </Text>
@@ -85,7 +85,7 @@ export function TravelType() {
                                 backgroundColor="#FFBA08"
                             />}
                         <Text
-                            fontSize={['18px', '20px', '20px', '24px']}
+                            fontSize={['18px', '18px', '18px', '24px']}
                         >
                             clássico
                         </Text>
@@ -103,7 +103,7 @@ export function TravelType() {
                                 backgroundColor="#FFBA08"
                             />}
                         <Text
-                            fontSize={['18px', '20px', '20px', '24px']}
+                            fontSize={['18px', '18px', '18px', '24px']}
                         >
                             e mais...
                         </Text>
