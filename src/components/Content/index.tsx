@@ -1,37 +1,29 @@
-import { VStack, Center, Divider, Text } from "@chakra-ui/react";
+import { VStack, Center, Divider, Text, Flex, StackDivider } from "@chakra-ui/react";
+import React from "react";
 
 export function Content() {
     return (
-        <>
+        <Center height="50px" display='block' align="center" marginTop='1rem'>
             <Divider
-                colorScheme='blackAlpha'
-                size='3xs'
-                variant='solid'
-                my={10}
-            // border='2px solid #47585B'
-            //orientation="horizontal" 
+                orientation="horizontal"
+                borderColor='1px solid #47585B'
+                width={['60px', '90px']}
             />
-            <VStack
-                spacing={4}
-                align="center"
-                line-height={['30px', '54px']}
+            <Text
+                fontFamily='Poppins'
+                fontStyle='normal'
+                fontWeight='500'
+                fontSize={['20px', '20px', '20px', '36px']}
             >
-                <Text
-                    fontFamily='Poppins'
-                    fontStyle='normal'
-                    fontWeight='500'
-                    fontSize={['20px', '20px', '20px', '36px']}
-                >
-                    Vamos nessa?</Text>
-                <Text
-                    fontFamily='Poppins'
-                    fontStyle='normal'
-                    fontWeight='500'
-                    fontSize={['20px', '20px', '20px', '36px']}
-                >
-                    Então escolha seu continente
-                </Text>
-            </VStack>
-        </>
+                Vamos nessa?</Text>
+            <Text
+                fontFamily='Poppins'
+                fontStyle='normal'
+                fontWeight='500'
+                fontSize={['20px', '20px', '20px', '36px']}
+            >
+                Então escolha seu continente
+            </Text>
+        </Center>
     )
 }
