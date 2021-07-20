@@ -11,7 +11,7 @@ export function TravelType() {
 
 
     return (
-        <Flex width="100%" height={['120px', '145px']} marginTop={['2rem', '5rem']} justifyContent='center'>
+        <Flex width="100%" height={['120px', '145px']} marginTop={['2rem', '5rem']} marginBottom={['1rem', '10rem', "0.125rem" ]} justifyContent='center'>
             <Grid
                 templateRows="repeat(3, 1fr)"
                 templateColumns={['repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(5, 1fr)']}
