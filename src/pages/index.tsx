@@ -12,7 +12,7 @@ export default function Home() {
       <Banner />
       <TravelType />
       <Content />
-      {/* <NNSwiper /> */}
+      <NNSwiper />
     </Flex>
   )
 }
