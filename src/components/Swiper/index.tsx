@@ -15,7 +15,7 @@ export function NNSwiper() {
     SwiperCore.use([EffectFade, Navigation, Pagination]);
 
     return (
-        <Flex w="100%" h={["250px", "450px"]}  mx="auto" mb={["5", "10"]} maxW={'1240px'} >
+        <Flex w="100%" h={["250px", "450px"]}  mx="auto" my={["5", "10", "20"]} maxW={'1240px'} >
             <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
@@ -26,7 +26,7 @@ export function NNSwiper() {
                 <SwiperSlide><Image htmlWidth='1240px' 
                 bg='linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url(.jpg)'
                 boxShadow='0px 4px 4px rgba(0, 0, 0, 0.25)'
-                src="/images/europa.svg" /></SwiperSlide>
+                src="images/Continent Image.jpg" /></SwiperSlide>
                 <SwiperSlide><Image htmlWidth='1240px' src="https://swiperjs.com/demos/images/nature-2.jpg" /></SwiperSlide>
                 <SwiperSlide><Image htmlWidth='1240px' src="https://swiperjs.com/demos/images/nature-3.jpg" /></SwiperSlide>
                 <SwiperSlide><Image htmlWidth='1240px' src="https://swiperjs.com/demos/images/nature-4.jpg" /></SwiperSlide>
