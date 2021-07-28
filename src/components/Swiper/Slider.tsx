@@ -3,6 +3,8 @@ import { Flex, Heading, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
+
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
@@ -12,6 +14,7 @@ interface SliderProps {
         id: string;
         imgurl: string;
         title: string;
+        description: string;
     }[];
 
 }
@@ -47,24 +50,12 @@ export function Slider({ continents }: SliderProps) {
                                     align='center'
                                     justifyContent='center'
                                 >
-                                    <Text
-                                        fontFamily='Poppins'
-                                        fontStyle='normal'
-                                        font-weight='bold'
-                                        fontSize='48px'
-                                        line-height='72px'
-                                        text-align='center'
-                                        color='#F5F8FA'
-                                    >Europa</Text>
-                                    {/* <Text
-                                        fontFamily='Poppins'
-                                        fontStyle='normal'
-                                        font-weight='bold'
-                                        fontSize='48px'
-                                        line-height='72px'
-                                        text-align='center'
-                                        color='#F5F8FA'
-                                    >O continente mais antigo</Text> */}
+                                    <Link href={`/continent/${it.id}`} >
+                                        <a>
+                                            <Heading textAlign='center' fontSize={["3xl", "4xl", "5xl"]} color="gray.100" fontWeight="bold">{it.title}</Heading>
+                                            <Text fontWeight="bold" color="gray.300" fontSize={["0.8rem", "1xl", "2xl"]} mt={["2", "4"]}>{it.description}</Text>
+                                        </a>
+                                    </Link>
                                 </Flex>
                             </SwiperSlide>
                         )
