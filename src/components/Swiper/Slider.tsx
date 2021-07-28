@@ -43,7 +43,29 @@ export function Slider({ continents }: SliderProps) {
                                     bgRepeat='no-repeat'
                                     bgSize='cover'
                                     h='100%'
-                                    w='100%' />
+                                    w='100%'
+                                    align='center'
+                                    justifyContent='center'
+                                >
+                                    <Text
+                                        fontFamily='Poppins'
+                                        fontStyle='normal'
+                                        font-weight='bold'
+                                        fontSize='48px'
+                                        line-height='72px'
+                                        text-align='center'
+                                        color='#F5F8FA'
+                                    >Europa</Text>
+                                    {/* <Text
+                                        fontFamily='Poppins'
+                                        fontStyle='normal'
+                                        font-weight='bold'
+                                        fontSize='48px'
+                                        line-height='72px'
+                                        text-align='center'
+                                        color='#F5F8FA'
+                                    >O continente mais antigo</Text> */}
+                                </Flex>
                             </SwiperSlide>
                         )
                     })
