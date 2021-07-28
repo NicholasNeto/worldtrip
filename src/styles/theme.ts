@@ -1,4 +1,8 @@
 import { extendTheme } from '@chakra-ui/react'
+import "swiper/swiper.min.css";
+import "swiper/components/effect-fade/effect-fade.min.css"
+import "swiper/components/navigation/navigation.min.css"
+import "swiper/components/pagination/pagination.min.css"
 
 export const theme = extendTheme({
     colors: {
