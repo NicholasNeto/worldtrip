@@ -8,12 +8,26 @@ import { Flex } from '@chakra-ui/react'
 
 
 export default function Home() {
+
+  const continents = [
+    {
+      id: '1',
+      imgurl: "url('/images/continents-europa.jpg')",
+      title: 'Europa',
+    },
+    {
+      id: '2',
+      imgurl: "url('/images/continents-europa.jpg')",
+      title: 'Brasil',
+    }
+  ]
+
   return (
     <Flex direction='column'>
       <Banner />
       <TravelType />
       <Content />
-      <Slider />
+      <Slider continents={continents} />
       <NNSwiper />
     </Flex>
   )
