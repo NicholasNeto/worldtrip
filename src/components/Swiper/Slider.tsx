@@ -7,7 +7,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
-export function Slider() {
+interface SliderProps {
+    continents: {
+        id: string;
+        imgurl: string;
+        title: string;
+    }[];
+
+}
+
+export function Slider({ continents }: SliderProps) {
     return (
         <Flex
             w="100%"
@@ -20,26 +29,25 @@ export function Slider() {
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
-                autoplay={{
-                    delay: 4000,
-                }}
+                // autoplay={{
+                //     delay: 4000,
+                // }}
                 style={{ width: '100%', flex: '1' }}>
-                <SwiperSlide>
-                    <Flex
-                        backgroundImage="url('/images/continents-europa.jpg')"
-                        bgRepeat='no-repeat'
-                        bgSize='cover'
-                        h='100%'
-                        w='100%' />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Flex
-                        backgroundImage="url('/images/continents-europa.jpg')"
-                        bgRepeat='no-repeat'
-                        bgSize='cover'
-                        h='100%'
-                        w='100%' />
-                </SwiperSlide>
+
+                {
+                    continents && continents.map(it => {
+                        return (
+                            <SwiperSlide>
+                                <Flex
+                                    backgroundImage={it.imgurl}
+                                    bgRepeat='no-repeat'
+                                    bgSize='cover'
+                                    h='100%'
+                                    w='100%' />
+                            </SwiperSlide>
+                        )
+                    })
+                }
             </Swiper>
         </Flex>
     )
