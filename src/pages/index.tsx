@@ -11,14 +11,16 @@ export default function Home() {
 
   const continents = [
     {
-      id: '1',
+      id: 'continents/europa',
       imgurl: "url('/images/continents-europa.jpg')",
       title: 'Europa',
+      description: 'O continente mais antigo',
     },
     {
       id: '2',
       imgurl: "url('/images/continents-europa.jpg')",
       title: 'Brasil',
+      description: 'Futebol e praias',
     }
   ]
 
