@@ -1,6 +1,7 @@
 
 import { Image, Flex, Text, SimpleGrid, Box, HStack } from "@chakra-ui/react"
 import React from "react"
+import { api } from "../../services/api"
 
 export default function Home() {
     return (
@@ -86,4 +87,22 @@ export default function Home() {
             </SimpleGrid>
         </>
     )
+}
+
+export async function getServerSideProps(context) {
+    const result = await api.get('/continents')
+    const { data } = result
+    const { slug } = context.params
+
+    console.log('slug', slug)
+    console.log("data", data)
+
+    if (data[slug]) {
+        console.log('data[slug]', data[slug])
+    }
+
+
+    return {
+        props: {}, // will be passed to the page component as props
+    }
 }
