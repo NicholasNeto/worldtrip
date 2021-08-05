@@ -2,6 +2,7 @@
 import { Image, Flex, Text, SimpleGrid, Box, HStack } from "@chakra-ui/react"
 import React from "react"
 import { api } from "../../services/api"
+import { getPrismicClient } from "../../services/prismic";
 
 export default function Home() {
     return (
@@ -89,20 +90,23 @@ export default function Home() {
     )
 }
 
-export async function getServerSideProps(context) {
-    const result = await api.get('/continents')
-    const { data } = result
-    const { slug } = context.params
+export async function getServerSideProps({ req, params }) {
+    // const result = await api.get('/continents')
+    const { slug } = params;
 
-    console.log('slug', slug)
-    console.log("data", data)
+    const prismic = getPrismicClient(req)
+    const response = await prismic.getByUID('post', String(slug), {})
 
-    if (data[slug]) {
-        console.log('data[slug]', data[slug])
-    }
-
+    const post = {
+        slug,
+        title: 'teste' ,
+        content: 'testte' ,
+        
+    };
 
     return {
-        props: {}, // will be passed to the page component as props
+        props: {
+            post,
+        }
     }
 }
