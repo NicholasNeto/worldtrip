@@ -1,10 +1,18 @@
 
-import { Image, Flex, Text, SimpleGrid, Box, HStack } from "@chakra-ui/react"
 import React from "react"
-import { api } from "../../services/api"
+import { Image, Flex, Text, SimpleGrid, Box, HStack } from "@chakra-ui/react"
 import { getPrismicClient } from "../../services/prismic";
+import { RichText } from "prismic-dom"
+interface ContinentProps {
+    continent: {
+        slug: string,
+        title: string,
+        description: string,
+        banner_image: string,
+    }
+}
 
-export default function Home() {
+export default function Home({ continent }: ContinentProps) {
     return (
         <>
             <Flex>
@@ -12,7 +20,7 @@ export default function Home() {
                     htmlHeight='500px'
                     htmlWidth='1440px'
                     width='100%'
-                    src="/images/continents-europa.svg"
+                    src={continent.banner_image}
                 />
 
                 <Text
@@ -32,13 +40,7 @@ export default function Home() {
                 >Europa</Text>
             </Flex >
             <SimpleGrid columns={2} spacing={40} p={20}>
-                <Text>
-                    A Europa é, por convenção, um dos seis continentes do mundo.
-                    Compreendendo a península ocidental da Eurásia, a Europa
-                    geralmente divide-se da Ásia a leste pela divisória de águas
-                    dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o
-                    mar Negro a sudeste
-                </Text>
+                <Text>{continent.description}</Text>
 
                 <HStack spacing="32px">
                     <Box>
@@ -91,22 +93,22 @@ export default function Home() {
 }
 
 export async function getServerSideProps({ req, params }) {
-    // const result = await api.get('/continents')
     const { slug } = params;
+    const prismic = getPrismicClient()
+    const response = await prismic.getByUID('continent', String(slug), {})
 
-    const prismic = getPrismicClient(req)
-    const response = await prismic.getByUID('post', String(slug), {})
-
-    const post = {
+    console.log('response  **%%**', response)
+    const continent = {
         slug,
-        title: 'teste' ,
-        content: 'testte' ,
-        
+        title: RichText.asText(response.data.title),
+        description: RichText.asText(response.data.description),
+        banner_image: response.data.banner_image.url
     };
 
+    console.log('continent --> ', continent)
     return {
         props: {
-            post,
+            continent,
         }
     }
 }
