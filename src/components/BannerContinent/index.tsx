@@ -3,20 +3,32 @@ import React from "react"
 
 interface BannerContinentProps {
     bannerImage: string,
+    title: string,
 }
 
-export function BannerContinent({ bannerImage }: BannerContinentProps) {
+export function BannerContinent({ bannerImage, title }: BannerContinentProps) {
 
     return (
         <Flex
             backgroundImage={`url(${bannerImage})`}
             bgRepeat='no-repeat'
             bgSize='cover'
-
-            height={['150px', '250px', '250px', '500px']}
+            backgroundPosition={['100% 40%', '100% 40%', '100% 40%', '100% 45%']}
+            height={['200px', '350px', '450px', '600px']}
             width='100%'
 
-            
-        ></Flex >
+
+        >
+            <Text
+                fontFamily='Poppins'
+                fontStyle='normal'
+                fontWeight='600'
+                fontSize={['28px', '38px', '38px', '48px']}
+                color='#F5F8FA'
+            >
+                {title}
+            </Text>
+
+        </Flex >
     )
 }
