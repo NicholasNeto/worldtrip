@@ -8,6 +8,11 @@ interface BannerContinentProps {
 
 export function BannerContinent({ bannerImage, title }: BannerContinentProps) {
 
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        sm: true,
+    })
+
     return (
         <Flex
             backgroundImage={`url(${bannerImage})`}
@@ -16,8 +21,7 @@ export function BannerContinent({ bannerImage, title }: BannerContinentProps) {
             backgroundPosition={['100% 40%', '100% 40%', '100% 40%', '100% 45%']}
             height={['200px', '350px', '450px', '600px']}
             width='100%'
-
-
+            alignItems={isWideVersion ? 'flex-end' : 'center'}
         >
             <Text
                 fontFamily='Poppins'
@@ -25,6 +29,8 @@ export function BannerContinent({ bannerImage, title }: BannerContinentProps) {
                 fontWeight='600'
                 fontSize={['28px', '38px', '38px', '48px']}
                 color='#F5F8FA'
+                marginBottom={['0rem', '3rem']}
+                marginLeft={['7rem', '10rem']}
             >
                 {title}
             </Text>
