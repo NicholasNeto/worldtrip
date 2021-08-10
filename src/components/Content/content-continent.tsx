@@ -14,9 +14,9 @@ export function ContentContinent({ description, infos }: ContentContinentProps) 
         <Flex direction="column" maxW="1160px" mx="auto" mb="10" mt='10' px="1rem">
             <Grid templateColumns="repeat(2, 1fr)" gap={6}>
                 <GridItem>{description}</GridItem>
-                <GridItem>
+                {/* <GridItem>
                     <Infos continent={infos}/>
-                </GridItem>
+                </GridItem> */}
             </Grid>
         </Flex>
     )
