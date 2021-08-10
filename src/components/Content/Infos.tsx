@@ -31,16 +31,16 @@ export default function Infos({ continent }) {
                     cidades +100
 
                     <Popover>
-                        <PopoverTrigger>
+                                 <PopoverTrigger>
                             <span>
                                 <Icon cursor="pointer" as={RiInformationLine} ml="1" color="gray.400" w={["10px", "16px"]} h={["10px", "16px"]} />
                             </span>
                         </PopoverTrigger>
-                        <PopoverContent bg="gray.700" color="yellow.400">
+                        {/*  <PopoverContent bg="gray.700" color="yellow.400">
                             <PopoverArrow bg="gray.700" />
                             <PopoverCloseButton />
                             <PopoverBody fontWeight="400" fontSize="lg">{continent.cities_list}</PopoverBody>
-                        </PopoverContent>
+                        </PopoverContent>*/}
                     </Popover>
                 </Text>
             </Flex>
