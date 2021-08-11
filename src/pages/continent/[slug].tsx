@@ -5,7 +5,7 @@ import { getPrismicClient } from "../../services/prismic";
 import { RichText } from "prismic-dom"
 import { BannerContinent } from "../../components/BannerContinent";
 import { ContentContinent } from "../../components/Content/content-continent";
-
+import { Cities } from "../../components/Cities/index";
 
 export interface InfosProps {
     countries: string;
@@ -27,6 +27,7 @@ export default function Continent({ continent }: ContinentProps) {
         <Flex direction='column'>
             <BannerContinent bannerImage={continent.banner_image} title={continent.title} />
             <ContentContinent description={continent.description} infos={continent.infos} />
+            <Cities />
         </Flex>
     )
 }
