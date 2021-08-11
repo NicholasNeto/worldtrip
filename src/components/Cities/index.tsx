@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, Image } from "@chakra-ui/react";
 import { InfosProps } from "../../pages/continent/[slug]";
 
 interface ContentContinentProps {
@@ -19,6 +19,21 @@ export function Cities({ description, infos }: ContentContinentProps) {
                 fontSize={['24px', '28px', '28px', '36px']}
                 color='#47585B'
              >Cidades + 100</Text>
+
+            <Flex
+              width="256px"  
+              height="279px"
+              backgroundImage='url(/images/london.jpg)'
+            >
+                <Text>Londres</Text>
+                <Text>Reino Unido</Text>
+                <Image
+                    boxSize="30px"
+                    borderRadius="full"
+                    src="/images/flag.jpg"
+                />
+            </Flex>
+
         </Flex>
     )
 }
