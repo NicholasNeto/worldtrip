@@ -27,7 +27,7 @@ export default function Continent({ continent }: ContinentProps) {
         <Flex direction='column'>
             <BannerContinent bannerImage={continent.banner_image} title={continent.title} />
             <ContentContinent description={continent.description} infos={continent.infos} />
-            <Cities />
+            {/* <Cities /> */}
         </Flex>
     )
 }
@@ -43,17 +43,25 @@ export async function getServerSideProps({ req, params }) {
     }, {})
 
     console.log('response  **%%**', response)
-    console.log('dataInfos  **%%**', response.data.infos[0])
+    console.log('response.data.cities[0]', response.data.cities[0])
 
-
+    const cities = response.data.cities.map(it => {
+        return {
+            city_image: it.city_image.url,
+            city_flag: it.city_flag.url,
+            city_capital: it.city_capital[0].text,
+            city_pais: it.city_pais[0].text,
+        }
+    })
+    console.log('cities custom', cities)
     const continent = {
         slug,
         title: RichText.asText(response.data.title),
         description: RichText.asText(response.data.description),
         banner_image: response.data.banner_image.url,
-        infos
+        infos, 
+        cities
     };
-
 
     console.log('continent --> ', continent)
     return {
