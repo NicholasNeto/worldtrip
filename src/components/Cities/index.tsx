@@ -1,10 +1,9 @@
 import React from "react";
 import { Flex, Text, Image, VStack, Box } from "@chakra-ui/react";
-import { InfosProps } from "../../pages/continent/[slug]";
+import { CitiesProps } from "../../pages/continent/[slug]";
 
 interface ContentContinentProps {
-    description: string;
-    infos: InfosProps;
+    cities: CitiesProps
 }
 
 

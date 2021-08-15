@@ -12,13 +12,22 @@ export interface InfosProps {
     languages: string;
     cities: string;
 }
+
+export interface CitiesProps {
+    city_image: string,
+    city_flag: string,
+    city_capital: string,
+    city_pais: string,
+}
+
 interface ContinentProps {
     continent: {
         slug: string,
         title: string,
         description: string,
         banner_image: string,
-        infos: InfosProps
+        infos: InfosProps,
+        cities: CitiesProps
     }
 }
 
@@ -27,7 +36,7 @@ export default function Continent({ continent }: ContinentProps) {
         <Flex direction='column'>
             <BannerContinent bannerImage={continent.banner_image} title={continent.title} />
             <ContentContinent description={continent.description} infos={continent.infos} />
-            {/* <Cities /> */}
+            <Cities cities={continent.cities} />
         </Flex>
     )
 }
@@ -59,7 +68,7 @@ export async function getServerSideProps({ req, params }) {
         title: RichText.asText(response.data.title),
         description: RichText.asText(response.data.description),
         banner_image: response.data.banner_image.url,
-        infos, 
+        infos,
         cities
     };
 
