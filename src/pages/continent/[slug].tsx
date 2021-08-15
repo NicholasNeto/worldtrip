@@ -27,7 +27,7 @@ interface ContinentProps {
         description: string,
         banner_image: string,
         infos: InfosProps,
-        cities: CitiesProps
+        cities: CitiesProps[]
     }
 }
 
