@@ -1,6 +1,6 @@
 
 import React from "react"
-import { Image, Flex, Text, SimpleGrid, Box, HStack } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
 import { getPrismicClient } from "../../services/prismic";
 import { RichText } from "prismic-dom"
 import { BannerContinent } from "../../components/BannerContinent";
@@ -51,9 +51,6 @@ export async function getServerSideProps({ req, params }) {
         return { ...acc, [cur]: dataInfos[cur][0].text }
     }, {})
 
-    console.log('response  **%%**', response)
-    console.log('response.data.cities[0]', response.data.cities[0])
-
     const cities = response.data.cities.map(it => {
         return {
             city_image: it.city_image.url,
@@ -62,7 +59,7 @@ export async function getServerSideProps({ req, params }) {
             city_pais: it.city_pais[0].text,
         }
     })
-    console.log('cities custom', cities)
+
     const continent = {
         slug,
         title: RichText.asText(response.data.title),
@@ -72,7 +69,6 @@ export async function getServerSideProps({ req, params }) {
         cities
     };
 
-    console.log('continent --> ', continent)
     return {
         props: {
             continent,
