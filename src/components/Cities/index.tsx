@@ -28,6 +28,7 @@ export function Cities({ cities }: CitieProps) {
                 {cities.map(it => {
                     return (
                         <City
+                            key={it.city_pais}
                             city_pais={it.city_pais}
                             city_image={it.city_image}
                             city_flag={it.city_flag}
