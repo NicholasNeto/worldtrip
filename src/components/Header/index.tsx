@@ -1,6 +1,10 @@
-import { Flex, Image, Grid } from "@chakra-ui/react";
+import { useRouter } from 'next/router'
+import { Flex, Image, Grid, Icon, Link } from "@chakra-ui/react";
+import { BiChevronLeft } from 'react-icons/bi';
 
 export function Header() {
+    const { asPath } = useRouter()
+
     return (
         <Flex
             as='header'
@@ -20,6 +24,15 @@ export function Header() {
                 templateColumns="repeat(3, 1fr)"
                 justifyContent="center"
             >
+
+                {asPath.startsWith('/continent') ? (
+                    <Link
+                        href="/" colorScheme='green'
+                        _focus={{ border: 'none' }} >
+                        <Icon as={BiChevronLeft} fontSize='20' />
+                    </Link>
+                ) : null}
+
                 <Image
                     src="/images/logo.svg"
                     alt="logo word trip"
