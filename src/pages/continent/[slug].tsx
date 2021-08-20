@@ -47,9 +47,14 @@ export async function getServerSideProps({ req, params }) {
     const response = await prismic.getByUID('continent', String(slug), {})
 
     const dataInfos = response.data.infos[0]
-    const infos = Object.keys(dataInfos).reduce((acc, cur) => {
-        return { ...acc, [cur]: dataInfos[cur][0].text }
-    }, {})
+
+
+    const infos = response.data.infos[0] ? Object.keys(response.data.infos[0]).reduce((acc, cur) => {
+        return { ...acc, [cur]: response.data.infos[0][cur][0].text }
+    }, {}) : {}
+    // const infos = Object.keys(dataInfos).reduce((acc, cur) => {
+    //     return { ...acc, [cur]: dataInfos[cur][0].text }
+    // }, {})
 
     const cities = response.data.cities.map(it => {
         return {
@@ -64,7 +69,7 @@ export async function getServerSideProps({ req, params }) {
         slug,
         title: RichText.asText(response.data.title),
         description: RichText.asText(response.data.description),
-        banner_image: response.data.banner_image.url,
+        banner_image: response.data.banner_image.url || "",
         infos,
         cities
     };
