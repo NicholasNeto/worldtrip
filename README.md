@@ -5,45 +5,22 @@
 
 ## Descrição do Projeto
 <p>
-  Projeto que tem como objetivo aprimoramento de conhecimento em React e criação de mapas com a biblioteca React Leaflet. 
-  Base do código https://blog.rocketseat.com.br/mapas-com-react-usando-leaflet/, o código foi aprimorado utilizando os
-  desafios sugeridos e inclusão de testes unitários. 
+  Desafio do bootcamp Ignite trilha React.js, tem como objetivo aprimoramento de conhecimento em React.
+  O desafio consiste em criar uma aplicação do zero utilizando um framework Chakra Ui. o código foi aprimorado utilizando os
+  desafios e implementações que juguei relevantes para o projeto.
 </p>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
-  <img alt='Issues' src='https://img.shields.io/github/issues/NicholasNeto/react-maps-leaflet' />
-  <img alt='Forks' src='https://img.shields.io/github/forks/NicholasNeto/react-maps-leaflet' />
-  <img alt='Start' src='https://img.shields.io/github/stars/NicholasNeto/react-maps-leaflet' />
-  <img alt='License' src='https://img.shields.io/github/license/NicholasNeto/react-maps-leaflet' />
-  <img alt='Twitter' src='https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FNicholasNeto%2Freact-maps-leaflet' />
+  <img alt='Issues' src='https://img.shields.io/github/issues/NicholasNeto/worldtrip' />
+  <img alt='Forks' src='https://img.shields.io/github/forks/NicholasNeto/worldtrip' />
+  <img alt='Start' src='https://img.shields.io/github/stars/NicholasNeto/worldtrip' />
+  <img alt='License' src='https://img.shields.io/github/license/NicholasNeto/worldtrip' />
+  <img alt='Twitter' src='https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FNicholasNeto%2Fworldtrip' />
 </p>
 
 <div display=flex align="center">
   <img alt="Version" src="https://media.giphy.com/media/uHcs6ijl7GUfNfF5xH/giphy.gif" />
 </div>
-
-<section id='content' >
-
-  ## Conteúdo
-  <p align="center">
-      <a href="#projectStatus">Sattus da Aplicação</a>
-      <a href="#requirements">Pré-requisitos</a>
-      <a href="#runningApp">Rodando o Aplicação (Web)</a>
-      <a href="#runningTest">Rodando os Teste (Unitários)</a>
-      <a href="#technology">Tecnologias</a>
-      <a href="#author">Autor</a>
-  </p>
-</section>
-
-<section id='projectStatus' >
-
-  ## Status Projeto
-  <h4 align="center"> 
-    🚧 Em construção...  🚧
-  </h4>
-
-</section>
 
 
 
@@ -58,79 +35,51 @@ Além disto, é bom ter um editor para trabalhar com o código como [VSCode](htt
 </section>
 
 
-<section id='runningApp'>
+<section>
 
   ### Rodando o Aplicação (web)
 
   ```bash
   # Clone este repositório
-  $ git clone <https://github.com/NicholasNeto/react-maps-leaflet.git>
+  $ git clone <https://github.com/NicholasNeto/worldtrip.git>
 
   # Acesse a pasta do projeto no terminal/cmd
-  $ cd react-maps-leaflet   
+  $ cd worldtrip   
 
   # Instale as dependências
+  $ yarn
   $ npm install
 
   # Execute a aplicação
+  $ yarn start
   $ npm run start
 
   # A applicação inciará na porta:3000 - acesse <http://localhost:3000>
 
   ```
-
 </section>
 
-<section id='runningTest'>
-
-  ### Rodando os Teste (Unitários)
-
-  ```bash
-  # Execute teste
-  $ npm test
-
-  # Pick the options
-
-  › Press a to run all tests.
-  › Press f to run only failed tests.
-  › Press q to quit watch mode.
-  › Press p to filter by a filename regex pattern.
-  › Press t to filter by a test name regex pattern.
-  › Press Enter to trigger a test run.
-
-  ```
-</section>
-
-
-<section id='technology'>
+<section>
 
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Chakra UI](https://chakra-ui.com/)
+- [Prismic.io](https://prismic.io/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [React Leaflet](https://react-leaflet.js.org/)
-- [React Date Picker](https://github.com/wojtekmaj/react-date-picker#readme)
-- [JEST](https://jestjs.io/)
-- [Enzyme](https://enzymejs.github.io/enzyme/)
 
 </section>
 
-<section id='author'>
+<section>
 
 ## Author
 
 👤 **Nicholas Neto**
 
-* Website: Nicholas
+* Website: https://worldtrip-eight.vercel.app/
 * Github: [@NicholasNeto](https://github.com/NicholasNeto)
 
 </section>
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
