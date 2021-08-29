@@ -34,8 +34,8 @@ Além disto, é bom ter um editor para trabalhar com o código como [VSCode](htt
 </section>
 
 <div display=flex align="center">
-  <img alt="Presentation" width="400" height="300" src="/assets/presentation_2.jpeg" />
-  <img alt="Presentation" width="400" height="300" src="/assets/presentation_3.jpeg" />
+  <img alt="Presentation" width="200" height="300" src="/assets/presentation_2.jpeg" />
+  <img alt="Presentation" width="200" height="300" src="/assets/presentation_3.jpeg" />
 </div>
 
 <section>
