@@ -25,7 +25,7 @@ export function TravelType() {
                                 boxSize={['50px', '50px', '50px', '85px']}
                             /> :
                             <Image
-                                src="Ellipse.svg"
+                                src="ellipse.svg"
                                 borderRadius="full"
                                 boxSize="15px"
                                 backgroundColor="#FFBA08"
@@ -43,7 +43,7 @@ export function TravelType() {
                             <Image src="/images/beach.svg"
                                 boxSize={['50px', '50px', '50px', '85px']} /> :
                             <Image
-                                src="Ellipse.svg"
+                                src="ellipse.svg"
                                 borderRadius="full"
                                 boxSize="15px"
                                 backgroundColor="#FFBA08"
@@ -61,7 +61,7 @@ export function TravelType() {
                             <Image src="/images/building.svg"
                                 boxSize={['50px', '50px', '50px', '85px']} /> :
                             <Image
-                                src="Ellipse.svg"
+                                src="ellipse.svg"
                                 borderRadius="full"
                                 boxSize="15px"
                                 backgroundColor="#FFBA08"
@@ -79,7 +79,7 @@ export function TravelType() {
                             <Image src="/images/museum.svg"
                                 boxSize={['50px', '50px', '50px', '85px']} /> :
                             <Image
-                                src="Ellipse.svg"
+                                src="ellipse.svg"
                                 borderRadius="full"
                                 boxSize="15px"
                                 backgroundColor="#FFBA08"
@@ -97,7 +97,7 @@ export function TravelType() {
                             <Image src="/images/earth.svg"
                                 boxSize={['50px', '50px', '50px', '85px']} /> :
                             <Image
-                                src="Ellipse.svg"
+                                src="ellipse.svg"
                                 borderRadius="full"
                                 boxSize="15px"
                                 backgroundColor="#FFBA08"

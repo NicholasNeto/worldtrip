@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Banner" width="400" height="300" src="/assets/banner.png" />
+  <img alt="Presentation" width="400" height="300" src="/images/presentation.jpeg" />
 </p>
 <h1 align="center"> WorldTrip </h1>
 
@@ -17,6 +17,12 @@
   <img alt='License' src='https://img.shields.io/github/license/NicholasNeto/worldtrip' />
   <img alt='Twitter' src='https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FNicholasNeto%2Fworldtrip' />
 </p>
+
+
+<div display=flex align="center">
+  <img alt="site food" width="500" height="300" src="/src/assets/goRestaurant.jpeg" />
+  <img alt="site food" width="500" height="300" src="/src/assets/newFood.png" />
+</div>
 
 <div display=flex align="center">
   <img alt="Version" src="https://media.giphy.com/media/uHcs6ijl7GUfNfF5xH/giphy.gif" />
