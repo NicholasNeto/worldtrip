@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Presentation" width="400" height="300" src="/images/presentation.jpeg" />
+  <img alt="Presentation" width="400" height="300" src="/assets/banner.jpeg" />
 </p>
 <h1 align="center"> WorldTrip </h1>
 
