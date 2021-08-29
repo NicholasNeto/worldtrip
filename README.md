@@ -20,17 +20,8 @@
 
 
 <div display=flex align="center">
-  <img alt="site food" width="500" height="300" src="/src/assets/goRestaurant.jpeg" />
-  <img alt="site food" width="500" height="300" src="/src/assets/newFood.png" />
+  <img alt="Presentation" width="400" height="300" src="/assets/presentation_1.jpeg" />
 </div>
-
-<div display=flex align="center">
-  <img alt="Version" src="https://media.giphy.com/media/uHcs6ijl7GUfNfF5xH/giphy.gif" />
-</div>
-
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/fbBpBTJLoFz3rHc66G" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/fbBpBTJLoFz3rHc66G">via GIPHY</a></p>
-
-
 
 <section id='requirements'>
 
@@ -42,6 +33,10 @@ Além disto, é bom ter um editor para trabalhar com o código como [VSCode](htt
 
 </section>
 
+<div display=flex align="center">
+  <img alt="Presentation" width="400" height="300" src="/assets/presentation_2.jpeg" />
+  <img alt="Presentation" width="400" height="300" src="/assets/presentation_3.jpeg" />
+</div>
 
 <section>
 
@@ -80,6 +75,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [TypeScript](https://www.typescriptlang.org/)
 
 </section>
+
+<div display=flex align="center">
+  <img alt="Version" src="https://media.giphy.com/media/fbBpBTJLoFz3rHc66G/giphy.gif" />
+</div>
 
 <section>
 
